@@ -1,9 +1,7 @@
-export async function timer (a){
-    return await new Promise((resolve) => {
+export async function sleep (a){
+    return await new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(a)
-        }, 1000)
-    })
+        }, a*1000)
+    }).then((r)=>{console.log(r)})
 }
-
-timer(1).then(r=>console.log(r))

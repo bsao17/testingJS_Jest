@@ -1,7 +1,8 @@
-import { timer } from "../timer";
+import { sleep } from "../timer";
 
 describe('timer test', ()=>{
     it("should test timer", ()=>{
-        expect(timer(1)).toBe(1)
+        const date = new Date.now().toLocaleString()
+        expect(date).toBeGreaterThan(3)
     })
 })
