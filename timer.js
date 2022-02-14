@@ -1,7 +1,7 @@
-export async function sleep (a){
-    return await new Promise((resolve, reject) => {
+export async function sleep(t) {
+    await new Promise((resolve) => {
         setTimeout(() => {
-            resolve(a)
-        }, a*1000)
-    }).then((r)=>{console.log(r)})
+            resolve(t)
+        }, t * 1000)
+    })
 }

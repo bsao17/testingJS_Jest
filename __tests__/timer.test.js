@@ -1,8 +1,9 @@
-import { sleep } from "../timer";
+import {sleep}  from "../timer.js";
 
 describe('timer test', ()=>{
-    it("should test timer", ()=>{
-        const date = new Date.now().toLocaleString()
-        expect(date).toBeGreaterThan(3)
+    it("should wait timer", async ()=>{
+        const date = Date.now()
+        await sleep(3)
+        expect(Date.now() - date ).toBeGreaterThanOrEqual(3000)
     })
 })
